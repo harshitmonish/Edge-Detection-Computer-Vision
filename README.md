@@ -1,5 +1,7 @@
 # Edge-Detection-Computer-Vision
 
+## Implemented edge detection on the following noisy image:
+  ![](edge_detection_noisy.png) 
 * Fistly I have implemented the median filter for denoising the image.
   ![denoise image](edge_detection_denoise.jpg)
 * Next implemented convolution operation by flipping the kernel.
