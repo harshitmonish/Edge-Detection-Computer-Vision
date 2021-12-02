@@ -22,8 +22,6 @@ def filter(img):
     Apply 3x3 Median Filter and reduce salt-and-pepper noises in the input noise image
     """
 
-    # TO DO: implement your solution here
-    #raise NotImplementedError
     
     r, c = 3, 3    
     denoise_img = img
@@ -53,8 +51,6 @@ def convolve2d(img, kernel):
     Convolves a given image (or matrix) and a given kernel.
     """
 
-    # TO DO: implement your solution here
-    #raise NotImplementedError
     
     #fetching the shape of the kernel
     r, c = kernel.shape
@@ -103,8 +99,6 @@ def edge_detect(img):
     All returned images should be normalized to [0, 255].
     """
 
-    # TO DO: implement your solution here
-    #raise NotImplementedError
     
     # computing the convolution using sobel_x, sobel_y filters to get vertical
     # and horizontal images
@@ -169,16 +163,16 @@ def edge_diag(img):
 
 
 if __name__ == "__main__":
-    noise_img = imread('task2.png', IMREAD_GRAYSCALE)
+    noise_img = imread('edge_detection_noisy.png', IMREAD_GRAYSCALE)
     denoise_img = filter(noise_img)
-    imwrite('results/task2_denoise.jpg', denoise_img)
+    imwrite('edge_detection_denoise.jpg', denoise_img)
     edge_x_img, edge_y_img, edge_mag_img = edge_detect(denoise_img)
-    imwrite('results/task2_edge_x.jpg', edge_x_img)
-    imwrite('results/task2_edge_y.jpg', edge_y_img)
-    imwrite('results/task2_edge_mag.jpg', edge_mag_img)
+    imwrite('edge_detection_edge_x.jpg', edge_x_img)
+    imwrite('edge_detection_edge_y.jpg', edge_y_img)
+    imwrite('edge_detection_edge_mag.jpg', edge_mag_img)
     edge_45_img, edge_135_img = edge_diag(denoise_img)
-    imwrite('results/task2_edge_diag1.jpg', edge_45_img)
-    imwrite('results/task2_edge_diag2.jpg', edge_135_img)
+    imwrite('edge_detection_edge_diag1.jpg', edge_45_img)
+    imwrite('edge_detection_edge_diag2.jpg', edge_135_img)
 
 
 
